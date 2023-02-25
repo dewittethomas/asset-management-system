@@ -1,0 +1,56 @@
+/* Variables */
+:root {
+    --blue: #047aed;
+    --white: #fff;
+}
+
+/* Reset page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: var(--blue);
+    color: var(--white);
+    height: 60px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 5px 10px;
+}
