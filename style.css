@@ -123,3 +123,25 @@ button[type="submit"] {
     font-weight: 300;
     cursor: pointer;
 }
+
+.add-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.add {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add i {
+    margin-right: 5px;
+}
