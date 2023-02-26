@@ -48,9 +48,41 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     font-size: 18px;
     font-weight: 300;
     padding: 5px 10px;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.assets-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.assets-table th {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 300;
+    text-align: left;
+    padding: 10px;
+}
+
+.assets-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.assets-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.assets-table tr:hover {
+    background-color: #ddd;
 }
