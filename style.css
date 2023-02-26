@@ -2,6 +2,7 @@
 :root {
     --blue: #047aed;
     --white: #fff;
+    --gray: #f2f2f2;
 }
 
 /* Reset page */
@@ -55,6 +56,18 @@ nav {
     padding: 5px 10px;
 }
 
+.status {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.status i {
+    margin-right: 10px;
+}
+
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -83,6 +96,30 @@ nav {
     background-color: #f2f2f2;
 }
 
-.assets-table tr:hover {
-    background-color: #ddd;
+.data-input {
+    margin-bottom: 20px;
+}
+
+.data-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
 }
