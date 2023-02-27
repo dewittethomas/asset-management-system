@@ -22,19 +22,19 @@
         <div class="main-container">
             <form>
                 <div class="data-input">
-                    <label>Gebruikersnaam</label>
-                    <input type="text" name="username">
+                    <label for="gebruikersnaam">Gebruikersnaam</label>
+                    <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
                 </div>
 
                 <div class="data-input">
-                    <label>Paswoord</label>
-                    <input type="password" name="password">
+                    <label for="paswoord">Paswoord</label>
+                    <input type="password" id="paswoord" name="paswoord" required>
+                </div>
+
+                <div class="button-container">
+                    <button class="button pointer" type="submit">Inloggen</button>
                 </div>
             </form>
-
-            <div class="button-container">
-                <a class="button">Inloggen</a>
-            </div>
         </div>
     </body>
 </html>

@@ -8,11 +8,15 @@
 
 /* Styling */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: sans-serif;
 }
 
-a {
-    text-decoration: none;
+.pointer {
+    cursor: pointer;
+}
+
+.tabel {
+    margin-top: 20px;
 }
 
 .button {
@@ -22,17 +26,15 @@ a {
     padding: 10px 20px;
     font-size: 18px;
     font-weight: 300;
-    cursor: pointer;
 }
 
 .button-container {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
 }
 
 .button-container i {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .data-input {
@@ -46,7 +48,7 @@ a {
     font-weight: 300;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="date"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -133,4 +135,3 @@ nav {
 .assets-table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-
