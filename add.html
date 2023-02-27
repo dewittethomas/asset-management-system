@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <title>Asset Management Systeem - Inloggen</title>
     </head>
 
@@ -22,18 +23,28 @@
         <div class="main-container">
             <form>
                 <div class="data-input">
-                    <label>Gebruikersnaam</label>
-                    <input type="text" name="username">
+                    <label>Naam van het asset</label>
+                    <input type="text">
                 </div>
 
                 <div class="data-input">
-                    <label>Paswoord</label>
-                    <input type="password" name="password">
-                </div>
+                    <label>Eigenaar</label>
+                    <input type="text">
+                </div>  
+
+                <div class="data-input">
+                    <label>Datum van activatie</label>
+                    <input type="text">
+                </div>  
+
+                <div class="data-input">
+                    <label>Serienummer</label>
+                    <input type="text">
+                </div>  
             </form>
 
             <div class="button-container">
-                <a class="button">Inloggen</a>
+                <a href="add.html" class="button"><i class="fa fa-plus"></i>Toevoegen</a>
             </div>
         </div>
     </body>
