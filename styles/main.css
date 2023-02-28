@@ -79,8 +79,9 @@ nav {
 
 .nav-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 25%;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
