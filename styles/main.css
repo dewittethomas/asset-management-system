@@ -11,10 +11,6 @@ body {
     font-family: sans-serif;
 }
 
-.tabel {
-    margin-top: 20px;
-}
-
 .button {
     background-color: var(--blue);
     color: var(--white);
@@ -131,4 +127,8 @@ nav {
 
 .assets-table tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+.tabel {
+    margin-top: 20px;
 }
