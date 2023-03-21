@@ -72,7 +72,6 @@ nav {
 .nav-links {
     display: flex;
     justify-content: flex-start;
-    width: 25%;
     flex-wrap: wrap;
 }
 
@@ -98,13 +97,21 @@ nav {
 .status {
     display: flex;
     align-items: center;
-    background-color: var(--gray);
     padding: 10px;
     margin-bottom: 20px;
 }
 
-.status i {
+.login {
+    background-color: var(--gray);
+}
+
+.login i {
     margin-right: 10px;
+}
+
+.error {
+    background-color: var(--red);
+    color: white;
 }
 
 .assets-table {

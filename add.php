@@ -1,3 +1,6 @@
+<?php
+    require "includes/session.php"
+?>
 <!DOCTYPE html>
 <html lang="nl">
     <head>
@@ -13,16 +16,15 @@
             <div class="nav-container">
                 <h1 class="logo">Asset Management Systeem</h1>
                 <ul class="nav-links">
-                    <li><a href="index.html">Assets</a></li>
-                    <li><a href="login.html">Inloggen</a></li>
-                    <li><a href="#">Afmelden</a></li>
+                    <li><a href="index.php">Assets</a></li>
+                    <li><a href="Includes/logout.php">Afmelden</a></li>
                 </ul>
             </div>
         </nav>
 
         <div class="main-container">
             <div class="button-container">
-                <a href="index.html" class="button"><i class="fa fa-arrow-left"></i>Terug</a>
+                <a href="index.php" class="button"><i class="fa fa-arrow-left"></i>Terug</a>
             </div>
 
             <form>

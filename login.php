@@ -1,3 +1,6 @@
+<?php
+    require "includes/login-process.php"
+?>  
 <!DOCTYPE html>
 <html lang="nl">
     <head>
@@ -12,23 +15,27 @@
             <div class="nav-container">
                 <h1 class="logo">Asset Management Systeem</h1>
                 <ul class="nav-links">
-                    <li><a href="index.html">Assets</a></li>
-                    <li><a href="login.html">Inloggen</a></li>
-                    <li><a href="#">Afmelden</a></li>
+                    <li><a href="login.php">Inloggen</a></li>
                 </ul>
             </div>
         </nav>
 
         <div class="main-container">
-            <form>
+            <?php if ($_SERVER["REQUEST_METHOD"] === "POST" && $is_invalid): ?>
+            <div class="status error">
+                <p>Uw gegevens zijn onjuist, probeer opnieuw</p>
+            </div>
+            <?php endif; ?>
+
+            <form method="post">
                 <div class="data-input">
-                    <label for="gebruikersnaam">Gebruikersnaam</label>
-                    <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
+                    <label for="username">Gebruikersnaam</label>
+                    <input type="text" id="username" name="username" value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''?>" required>
                 </div>
 
                 <div class="data-input">
-                    <label for="paswoord">Paswoord</label>
-                    <input type="password" id="paswoord" name="paswoord" required>
+                    <label for="password">Paswoord</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
 
                 <div class="button-container">
