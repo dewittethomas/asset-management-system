@@ -3,8 +3,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $is_invalid = true;
-        session_start();
-
+        
         $username = $_POST["username"];
         $password = $_POST["password"];
         
@@ -19,13 +18,12 @@
             if (password_verify($password, $row["password_hash"])) {
                 $is_invalid = false;
 
+                session_start();
                 $_SESSION["username"] = $username;
 
                 header("Location: index.php");
                 exit;
             }
-        } else if ($is_invalid) {
-            $_SESSION["incorrect_username"] = $username;
         }
 
         $stmt -> close();

@@ -1,13 +1,10 @@
-<?php
-    require "includes/login-process.php"
-?>  
 <!DOCTYPE html>
 <html lang="nl">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/main.css">
-        <title>Asset Management Systeem - Inloggen</title>
+        <title>Asset Management Systeem - Wachtwoord vergeten</title>
     </head>
 
     <body>
@@ -21,12 +18,6 @@
         </nav>
 
         <div class="main-container">
-            <?php if ($_SERVER["REQUEST_METHOD"] === "POST" && $is_invalid): ?>
-            <div class="status error">
-                <p>Uw gegevens zijn onjuist, probeer opnieuw</p>
-            </div>
-            <?php endif; ?>
-
             <form method="post">
                 <div class="data-input">
                     <label for="username">Gebruikersnaam</label>
@@ -34,16 +25,12 @@
                 </div>
 
                 <div class="data-input">
-                    <label for="password">Paswoord</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-
-                <div class="password-reset">
-                    <a href="password-reset.php">Wachtwoord vergeten?</a>
+                    <label for="password">Nieuw Paswoord</label>
+                    <input type="password" id="new-password" name="new-password" required>
                 </div>
 
                 <div class="button-container">
-                    <button class="button" type="submit">Inloggen</button>
+                    <button class="button" type="submit">Instellen</button>
                 </div>
             </form>
         </div>
