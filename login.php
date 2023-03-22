@@ -30,12 +30,16 @@
             <form method="post">
                 <div class="data-input">
                     <label for="username">Gebruikersnaam</label>
-                    <input type="text" id="username" name="username" value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''?>" required>
+                    <input type="text" id="username" name="username" value="<?php echo isset($_SESSION["incorrect_username"]) ? $_SESSION["incorrect_username"] : '' ?>" required>
                 </div>
 
                 <div class="data-input">
                     <label for="password">Paswoord</label>
                     <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="password-reset">
+                    <a>Wachtwoord vergeten?</a>
                 </div>
 
                 <div class="button-container">
