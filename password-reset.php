@@ -1,3 +1,6 @@
+<?php
+    require "includes/reset-process.php"
+?>
 <!DOCTYPE html>
 <html lang="nl">
     <head>
@@ -18,6 +21,16 @@
         </nav>
 
         <div class="main-container">
+            <?php if ($_SERVER["REQUEST_METHOD"] === "POST" && $is_found): ?>
+            <div class="status succes">
+                <p>Uw wachtwoord is succesvol aangepast!</p>
+            </div>
+            <?php elseif ($_SERVER["REQUEST_METHOD"] === "POST" && !$is_found): ?>
+            <div class="status error">
+                <p>Uw gebruikersnaam is niet gevonden, probeer opnieuw</p>
+            </div>
+            <?php endif; ?>
+
             <form method="post">
                 <div class="data-input">
                     <label for="username">Gebruikersnaam</label>
@@ -25,7 +38,7 @@
                 </div>
 
                 <div class="data-input">
-                    <label for="password">Nieuw Paswoord</label>
+                    <label for="new-password">Nieuw Paswoord</label>
                     <input type="password" id="new-password" name="new-password" required>
                 </div>
 

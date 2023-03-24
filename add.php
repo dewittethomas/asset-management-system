@@ -17,7 +17,7 @@
                 <h1 class="logo">Asset Management Systeem</h1>
                 <ul class="nav-links">
                     <li><a href="index.php">Assets</a></li>
-                    <li><a href="Includes/logout.php">Afmelden</a></li>
+                    <li><a href="includes/logout.php">Afmelden</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,26 +27,11 @@
                 <a href="index.php" class="button"><i class="fa fa-arrow-left"></i>Terug</a>
             </div>
 
-            <form>
+            <form method="post">
                 <div class="data-input">
                     <label for="naam">Naam van het asset</label>
                     <input type="text" id="naam" name="naam" required>
-                </div>
-
-                <div class="data-input">
-                    <label for="eigenaar">Eigenaar</label>
-                    <input type="text" id="eigenaar" name="eigenaar" required>
-                </div>  
-
-                <div class="data-input">
-                    <label for="datum">Datum van activatie</label>
-                    <input class="date pointer" type="date" id="datum" name="datum" required>
-                </div>  
-
-                <div class="data-input">
-                    <label for="serienummer">Serienummer</label>
-                    <input type="text" id="serienummer" name="serienummer" required>
-                </div>  
+                </div> 
 
                 <div class="button-container">
                     <button class="button" type="submit"><i class="fa fa-plus"></i>Toevoegen</button>

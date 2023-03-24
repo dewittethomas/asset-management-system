@@ -24,44 +24,45 @@
 
         <div class="main-container">
                 
-            <div class="status login">
-                <i class="fa fa-user"></i>
-                <p>U bent ingelogd als: <b><?php echo $username ?></b></p>
+            <div class="status user">
+                <p><i class="fa fa-user"></i>U bent ingelogd als: <b><?php echo $username ?></b></p>
             </div>
 
-            <table class="assets-table">
-                <thead>
-                    <tr>
-                        <th>Naam</th>
-                        <th>Eigenaar</th>
-                        <th>Datum van activatie</th>
-                        <th>Serienummer</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Asset 1</td>
-                        <td>Eigenaar 1</td>
-                        <td>2022-01-01</td>
-                        <td>123ABC</td>
-                    </tr>
-                    <tr>
-                        <td>Asset 2</td>
-                        <td>Eigenaar 2</td>
-                        <td>2022-01-02</td>
-                        <td>456DEF</td>
-                    </tr>
-                    <tr>
-                        <td>Asset 3</td>
-                        <td>Eigenaar 3</td>
-                        <td>2022-01-03</td>
-                        <td>789GHI</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="assets-container">
+                <table class="assets-table">
+                    <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>Eigenaar</th>
+                            <th>Datum van activatie</th>
+                            <th>Serienummer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Asset 1</td>
+                            <td>Eigenaar 1</td>
+                            <td>2022-01-01</td>
+                            <td>123ABC</td>
+                        </tr>
+                        <tr>
+                            <td>Asset 2</td>
+                            <td>Eigenaar 2</td>
+                            <td>2022-01-02</td>
+                            <td>456DEF</td>
+                        </tr>
+                        <tr>
+                            <td>Asset 3</td>
+                            <td>Eigenaar 3</td>
+                            <td>2022-01-03</td>
+                            <td>789GHI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="button-container">
-                <a href="add.php" class="button tabel"><i class="fa fa-plus"></i>Toevoegen</a>
+                <a href="add.php" class="button"><i class="fa fa-plus"></i>Toevoegen</a>
             </div>
         </div>
     </body>

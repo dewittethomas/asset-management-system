@@ -30,7 +30,7 @@
             <form method="post">
                 <div class="data-input">
                     <label for="username">Gebruikersnaam</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''?>" required>
                 </div>
 
                 <div class="data-input">

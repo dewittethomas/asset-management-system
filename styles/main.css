@@ -6,18 +6,115 @@
 /* Reset defaults */
 @import url("reset.css");
 
-/* Styling */
+/* General */
+
 body {
     font-family: sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+/* Navigation */
+
+nav {
+    background-color: var(--blue);
+    color: var(--white);
+    height: 60px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: var(--white);
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.nav-links li:last-child a {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.user {
+    background-color: var(--grey);
+}
+
+.user i {
+    margin-right: 10px;
+}
+
+.error {
+    background-color: var(--red);
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.succes {
+    background-color: var(--green);
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.assets-container {
+    margin: 20px 0;
+}
+
+.assets-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.assets-table th {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 300;
+    text-align: left;
+    padding: 10px;
+}
+
+.assets-table td {
+    border: 1px solid var(--light-grey);
+    padding: 10px;
+}
+
+.assets-table tr:nth-child(even) {
+    background-color: var(--grey);
 }
 
 .button {
     background-color: var(--blue);
     color: var(--white);
+    font-size: 16px;
+    font-weight: 300;
     border: none;
     padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 300;
 }
 
 .button-container {
@@ -40,102 +137,90 @@ body {
     font-weight: 300;
 }
 
-input[type="text"], input[type="password"], input[type="date"] {
+input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--light-grey);
 }
 
-/* Navigation */
-
-nav {
-    background-color: var(--blue);
-    color: var(--white);
-    height: 60px;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 300;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links a {
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 300;
-    padding: 5px 10px;
-}
-
-/* Main */
-
-.main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.status {
+.password-reset {
     display: flex;
     align-items: center;
-    padding: 10px;
-    margin-bottom: 20px;
 }
 
-.login {
-    background-color: var(--gray);
+.password-reset a {
+    color: var(--dark-grey);
 }
 
-.login i {
-    margin-right: 10px;
+@media (max-width: 560px) {
+    .nav-links a {
+        padding: 10px 5px;
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .status {
+        font-size: 14px;
+    }
+
+    .assets-table {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .data-input label {
+        font-size: 16px;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 14px;
+    }
+
+    .password-reset a {
+        font-size: 14px;
+    }
 }
 
-.error {
-    background-color: var(--red);
-    color: white;
-}
+@media (max-width: 460px) {
+    .nav-links a {
+        padding: 10px 3px;
+        margin: 0 2px;
+        font-size: 10px;
+    }
 
-.assets-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+    .logo {
+        font-size: 14px;
+    }
 
-.assets-table th {
-    background-color: var(--blue);
-    color: var(--white);
-    font-weight: 300;
-    text-align: left;
-    padding: 10px;
-}
+    .status {
+        font-size: 10px;
+    }
 
-.assets-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-}
+    .assets-table {
+        font-size: 10px;
+    }
 
-.assets-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+    .button {
+        font-size: 10px;
+    }
 
-.tabel {
-    margin-top: 20px;
+    .data-input label {
+        font-size: 12px;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 10px;
+    }
+
+    .password-reset a {
+        font-size: 10px;
+    }
 }

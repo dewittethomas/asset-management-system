@@ -2,6 +2,9 @@
 :root {
     --blue: #047aed;
     --white: #fff;
-    --gray: #f2f2f2;
+    --grey: #f2f2f2;
+    --light-grey: #ddd;
+    --dark-grey: #8796a5;
     --red: #ff3333;
+    --green: #2bb673;
 }
