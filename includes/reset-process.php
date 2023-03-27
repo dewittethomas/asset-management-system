@@ -15,8 +15,8 @@
             $is_found = true;
         } 
 
-        $stmt->close();
+        $stmt -> close();
     }
 
-    $conn->close();
+    $conn -> close();
 ?>

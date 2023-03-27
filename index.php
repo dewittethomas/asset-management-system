@@ -1,5 +1,5 @@
 <?php
-    require "includes/session.php"
+    require "includes/session.php";
 ?>
 <!DOCTYPE html>
 <html lang="nl">

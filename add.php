@@ -1,5 +1,6 @@
 <?php
-    require "includes/session.php"
+    require "includes/session.php";
+    require "includes/add-process.php";
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -29,8 +30,8 @@
 
             <form method="post">
                 <div class="data-input">
-                    <label for="naam">Naam van het asset</label>
-                    <input type="text" id="naam" name="naam" required>
+                    <label for="name">Naam van het asset</label>
+                    <input type="text" id="name" name="name" required>
                 </div> 
 
                 <div class="button-container">

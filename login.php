@@ -1,5 +1,5 @@
 <?php
-    require "includes/login-process.php"
+    require "includes/login-process.php";
 ?>  
 <!DOCTYPE html>
 <html lang="nl">
@@ -30,7 +30,7 @@
             <form method="post">
                 <div class="data-input">
                     <label for="username">Gebruikersnaam</label>
-                    <input type="text" id="username" name="username" value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''?>" required>
+                    <input type="text" id="username" name="username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''?>" required>
                 </div>
 
                 <div class="data-input">

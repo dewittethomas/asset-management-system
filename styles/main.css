@@ -115,6 +115,7 @@ nav {
     font-weight: 300;
     border: none;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .button-container {

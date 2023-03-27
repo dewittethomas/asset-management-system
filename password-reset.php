@@ -1,5 +1,5 @@
 <?php
-    require "includes/reset-process.php"
+    require "includes/reset-process.php";
 ?>
 <!DOCTYPE html>
 <html lang="nl">
