@@ -1,5 +1,6 @@
 <?php
     require "includes/session.php";
+    require "includes/assets-table.php";
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -25,7 +26,7 @@
         <div class="main-container">
                 
             <div class="status user">
-                <p><i class="fa fa-user"></i>U bent ingelogd als: <b><?php echo $username ?></b></p>
+                <p><i class="fa fa-user"></i>U bent ingelogd als: <b><?php echo htmlspecialchars($_SESSION["username"]) ?></b></p>
             </div>
 
             <div class="assets-container">
@@ -39,24 +40,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Asset 1</td>
-                            <td>Eigenaar 1</td>
-                            <td>2022-01-01</td>
-                            <td>123ABC</td>
-                        </tr>
-                        <tr>
-                            <td>Asset 2</td>
-                            <td>Eigenaar 2</td>
-                            <td>2022-01-02</td>
-                            <td>456DEF</td>
-                        </tr>
-                        <tr>
-                            <td>Asset 3</td>
-                            <td>Eigenaar 3</td>
-                            <td>2022-01-03</td>
-                            <td>789GHI</td>
-                        </tr>
+                        <?php 
+                        if ($result -> num_rows > 0 ) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr>";
+                                echo "<td>{$row["name"]}</td>";
+                                echo "<td>{$row["owner_username"]}</td>";
+                                echo "<td>{$row["activation_date"]}</td>";
+                                echo "<td>{$row["serial_number"]}</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr>";
+                            echo "<td colspan='4' class='no-data'>Er zijn geen assets aanwezig</td>";
+                            echo "</tr>";
+                        }
+
+                        mysqli_close($conn);
+                        ?>
                     </tbody>
                 </table>
             </div>

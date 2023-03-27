@@ -108,6 +108,10 @@ nav {
     background-color: var(--grey);
 }
 
+.no-data {
+    text-align: center;
+}
+
 .button {
     background-color: var(--blue);
     color: var(--white);

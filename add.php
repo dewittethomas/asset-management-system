@@ -24,6 +24,12 @@
         </nav>
 
         <div class="main-container">
+            <?php if ($_SERVER["REQUEST_METHOD"] === "POST"): ?>
+            <div class="status succes">
+                <p>Uw asset '<?php echo htmlspecialchars($_POST["name"]) ?>' is succesvol toegevoegd aan de assets!</p>
+            </div>
+            <?php endif; ?>
+
             <div class="button-container">
                 <a href="index.php" class="button"><i class="fa fa-arrow-left"></i>Terug</a>
             </div>
