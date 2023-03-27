@@ -52,7 +52,7 @@
                             }
                         } else {
                             echo "<tr>";
-                            echo "<td colspan='4' class='no-data'>Er zijn geen assets aanwezig</td>";
+                            echo "<td colspan='4' class='no-data'>Er zijn geen assets beschikbaar</td>";
                             echo "</tr>";
                         }
 
