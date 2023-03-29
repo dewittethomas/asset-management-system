@@ -22,7 +22,7 @@
 
         <div class="main-container">
             <?php if ($_SERVER["REQUEST_METHOD"] === "POST" && $is_found): ?>
-            <div class="status succes">
+            <div class="status success">
                 <p>Uw wachtwoord is succesvol aangepast!</p>
             </div>
             <?php elseif ($_SERVER["REQUEST_METHOD"] === "POST" && !$is_found): ?>

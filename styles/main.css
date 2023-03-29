@@ -80,7 +80,7 @@ nav {
     margin-bottom: 20px;
 }
 
-.succes {
+.success {
     background-color: var(--green);
     color: var(--white);
     margin-bottom: 20px;
@@ -132,6 +132,7 @@ nav {
     font-weight: 300;
     border: none;
     padding: 10px 20px;
+    margin-left: 10px;
     cursor: pointer;
 }
 

@@ -26,7 +26,7 @@
         <div class="main-container">
                 
             <div class="status user">
-                <p><i class="fa fa-user"></i>U bent ingelogd als: <b><?php echo htmlspecialchars($username) ?></b></p>
+                <p><i class="fa fa-user"></i>U bent ingelogd als: <b><?php echo htmlspecialchars($username); ?></b></p>
             </div>
 
             <div class="assets-container">
@@ -42,14 +42,14 @@
                     </thead>
                     <tbody>
                         <?php 
-                        if ($result -> num_rows > 0 ) {
+                        if (!$empty) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo "<tr>";
                                 echo "<td>{$row["name"]}</td>";
                                 echo "<td>{$row["owner_name"]}</td>";
                                 echo "<td>{$row["activation_date"]}</td>";
                                 echo "<td>{$row["serial_number"]}</td>";
-                                echo "<td class='delete'><a class='delete-button' href='includes/delete-process.php?serial={$row['serial_number']}'><i class='fa fa-x'></i></a></td>";
+                                echo "<td class='delete'><a class='delete-button' href='includes/delete-process.php?serial={$row["serial_number"]}'><i class='fa fa-x'></i></a></td>";
                                 echo "</tr>";
                             }
                         } else {
@@ -65,6 +65,10 @@
             </div>
 
             <div class="button-container">
+                <?php if (!$empty): ?>
+                <a href="includes/export-process.php" class="button">Exporteren als CSV</a>
+                <?php endif; ?>
+
                 <a href="add.php" class="button"><i class="fa fa-plus"></i>Toevoegen</a>
             </div>
         </div>

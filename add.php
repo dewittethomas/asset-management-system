@@ -25,8 +25,8 @@
 
         <div class="main-container">
             <?php if ($_SERVER["REQUEST_METHOD"] === "POST"): ?>
-            <div class="status succes">
-                <p>Uw asset '<?php echo htmlspecialchars($_POST["name"]) ?>' is succesvol toegevoegd aan de assets!</p>
+            <div class="status success">
+                <p>Uw asset '<?php echo htmlspecialchars($_POST["name"]); ?>' is succesvol toegevoegd aan de assets!</p>
             </div>
             <?php endif; ?>
 
