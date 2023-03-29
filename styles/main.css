@@ -50,11 +50,15 @@ nav {
     margin-right: 0;
 }
 
+/* Main */
+
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 30px;
 }
+
+/* Status bar */
 
 .status {
     display: flex;
@@ -82,6 +86,8 @@ nav {
     margin-bottom: 20px;
 }
 
+/* Assets table */
+
 .assets-container {
     margin: 20px 0;
 }
@@ -108,9 +114,16 @@ nav {
     background-color: var(--grey);
 }
 
+.delete {
+    width: 1%;
+    white-space: nowrap;
+}
+
 .no-data {
     text-align: center;
 }
+
+/* Buttons */
 
 .button {
     background-color: var(--blue);
@@ -131,6 +144,17 @@ nav {
     margin-right: 8px;
 }
 
+.delete-button {
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Input */
+
 .data-input {
     margin-bottom: 20px;
 }
@@ -149,6 +173,8 @@ input[type="text"], input[type="password"] {
     border: 1px solid var(--light-grey);
 }
 
+/* Password reset */
+
 .password-reset {
     display: flex;
     align-items: center;
@@ -157,6 +183,8 @@ input[type="text"], input[type="password"] {
 .password-reset a {
     color: var(--dark-grey);
 }
+
+/* Mobile screens */
 
 @media (max-width: 560px) {
     .nav-links a {
@@ -181,6 +209,10 @@ input[type="text"], input[type="password"] {
         font-size: 14px;
     }
 
+    .delete-button {
+        padding: 6px 14px;
+    }
+
     .data-input label {
         font-size: 16px;
     }
@@ -193,6 +225,8 @@ input[type="text"], input[type="password"] {
         font-size: 14px;
     }
 }
+
+/* Smaller mobile screens */
 
 @media (max-width: 460px) {
     .nav-links a {
@@ -215,6 +249,10 @@ input[type="text"], input[type="password"] {
 
     .button {
         font-size: 10px;
+    }
+
+    .delete-button {
+        padding: 4px 12px;
     }
 
     .data-input label {

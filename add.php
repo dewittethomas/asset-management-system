@@ -40,6 +40,11 @@
                     <input type="text" id="name" name="name" required>
                 </div> 
 
+                <div class="data-input">
+                    <label for="owner">Eigenaar</label>
+                    <input type="text" id="owner" name="owner" required>
+                </div> 
+
                 <div class="button-container">
                     <button class="button" type="submit"><i class="fa fa-plus"></i>Toevoegen</button>
                 </div>

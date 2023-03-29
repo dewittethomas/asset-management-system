@@ -15,12 +15,12 @@
         $count = $row["count"] + 1;
 
         $name = $_POST["name"];
-        $owner_username = $_SESSION["username"];
+        $owner = $_POST["owner"];
         $activation_date = date("Y-m-d");
         $serial_number =  $serial_date . "-" . format($count);
         
-        $stmt = $conn -> prepare("INSERT INTO assets VALUES (?, '$owner_username', '$activation_date', '$serial_number')");
-        $stmt -> bind_param("s", $name);
+        $stmt = $conn -> prepare("INSERT INTO assets VALUES (?, ?, '$activation_date', '$serial_number')");
+        $stmt -> bind_param("ss", $name, $owner);
         $stmt -> execute();
         
         $stmt -> close();

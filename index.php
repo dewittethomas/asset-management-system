@@ -26,7 +26,7 @@
         <div class="main-container">
                 
             <div class="status user">
-                <p><i class="fa fa-user"></i>U bent ingelogd als: <b><?php echo htmlspecialchars($_SESSION["username"]) ?></b></p>
+                <p><i class="fa fa-user"></i>U bent ingelogd als: <b><?php echo htmlspecialchars($username) ?></b></p>
             </div>
 
             <div class="assets-container">
@@ -37,6 +37,7 @@
                             <th>Eigenaar</th>
                             <th>Datum van activatie</th>
                             <th>Serienummer</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,14 +46,15 @@
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo "<tr>";
                                 echo "<td>{$row["name"]}</td>";
-                                echo "<td>{$row["owner_username"]}</td>";
+                                echo "<td>{$row["owner_name"]}</td>";
                                 echo "<td>{$row["activation_date"]}</td>";
                                 echo "<td>{$row["serial_number"]}</td>";
+                                echo "<td class='delete'><a class='delete-button' href='includes/delete-process.php?serial={$row['serial_number']}'><i class='fa fa-x'></i></a></td>";
                                 echo "</tr>";
                             }
                         } else {
                             echo "<tr>";
-                            echo "<td colspan='4' class='no-data'>Er zijn geen assets beschikbaar</td>";
+                            echo "<td colspan='5' class='no-data'>Er zijn geen assets beschikbaar</td>";
                             echo "</tr>";
                         }
 
