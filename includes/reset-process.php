@@ -7,8 +7,8 @@
         $username = $_POST["username"];
         $password_hash = password_hash($_POST["new-password"], PASSWORD_DEFAULT);
 
-        $stmt = $conn -> prepare("UPDATE users SET password_hash = '$password_hash' WHERE username = ?");
-        $stmt -> bind_param("s", $username);
+        $stmt = $conn -> prepare("UPDATE users SET password_hash = ? WHERE username = ?");
+        $stmt -> bind_param("ss", $password_hash, $username);
         $stmt -> execute();
 
         if ($stmt -> affected_rows === 1) {
