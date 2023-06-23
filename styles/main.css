@@ -35,6 +35,10 @@ nav {
     height: 100%;
 }
 
+.logo {
+    font-size: 20px;
+}
+
 .nav-links {
     display: flex;
 }
@@ -188,14 +192,14 @@ input[type="text"], input[type="password"] {
 /* Mobile screens */
 
 @media (max-width: 560px) {
+    .logo {
+        font-size: 18px;
+    }
+
     .nav-links a {
         padding: 10px 5px;
         margin: 0 5px;
         font-size: 14px;
-    }
-
-    .logo {
-        font-size: 18px;
     }
 
     .status {
@@ -230,14 +234,14 @@ input[type="text"], input[type="password"] {
 /* Smaller mobile screens */
 
 @media (max-width: 460px) {
+    .logo {
+        font-size: 14px;
+    }
+
     .nav-links a {
         padding: 10px 3px;
         margin: 0 2px;
         font-size: 10px;
-    }
-
-    .logo {
-        font-size: 14px;
     }
 
     .status {
