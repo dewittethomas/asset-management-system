@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <title>Asset Management Systeem - Wachtwoord vergeten</title>
     </head>
 
@@ -25,11 +26,19 @@
             <div class="status success">
                 <p>Uw wachtwoord is succesvol aangepast!</p>
             </div>
+            <?php elseif ($_SERVER["REQUEST_METHOD"] === "POST" && $is_identical): ?>
+            <div class="status error">
+                <p>Het nieuwe wachtwoord mag niet hetzelfde zijn als het huidige wachtwoord</p>
+            </div>
             <?php elseif ($_SERVER["REQUEST_METHOD"] === "POST" && !$is_found): ?>
             <div class="status error">
                 <p>Uw gebruikersnaam is niet gevonden, probeer opnieuw</p>
             </div>
             <?php endif; ?>
+
+            <div class="button-container">
+                <a href="index.php" class="button"><i class="fa fa-arrow-left"></i>Terug</a>
+            </div>    
 
             <form method="post">
                 <div class="data-input">
